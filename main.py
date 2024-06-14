@@ -75,7 +75,7 @@ def checklogin() -> Optional[str]:
     Checks login credentials.
 
     Returns:
-        str: Redirect response.
+        Redirect response.
     """
     username = request.form["username"].lower()
     password = request.form["password"]
@@ -96,7 +96,7 @@ def checkregister() -> None:
     Checks register credentials.
 
     Returns:
-        str: Redirect response.
+        Redirect response.
     """
     username = request.form["username"].lower()
     password = request.form["password"]
