@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Python Login Project</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <form action="/checkregister" method="post" autocomplete="off">
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" required><br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" required><br>
+        <input type="submit" value="Register" class="input-button">
+    </form>
+    <label>After account creation, please log in!</label><br>
+    <label>Already have an account? <a href="login.html">Login</a></label>
+    <script>
+        let search = window.location.search;
+        if (search.includes("credentials=invalid")) {
+            ((...args) => {
+            let element = document.createElement("div");
+            
+            element.style.fontSize = "20px";
+            element.style.fontWeight = "bold";
+            element.style.fontFamily = "Comic Sans MS, sans-serif";
+            element.style.color = "red";
+
+            if (search.includes("credentials=invalid_exists")) {
+                element.innerHTML = "User already exists! Please choose a different username!";
+            }
+            
+            else {
+                element.innerHTML = "Invalid credentials!";
+            }
+            
+            document.body.appendChild(element);
+            history.pushState(null, "", "/");
+        })();
+        }
+    </script>
+</body>
+</html>

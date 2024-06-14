@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(240, 240, 240);
+    display: block;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+input {
+    outline: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
+.input-button {
+    display: block;
+    width: 50%;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgb(225, 225, 225);
+}
+
+.input-button:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.input-button:active {
+    background-color: white;
+}
